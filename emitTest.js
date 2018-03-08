@@ -1,3 +1,5 @@
+"use strict";
+
 //you want to only extend from this
 const EventEmitter = require("events");
 

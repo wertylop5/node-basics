@@ -1,3 +1,5 @@
+"use strict";
+
 //"import" the http module
 const http = require("http");
 
@@ -22,5 +24,6 @@ server.on("listening", () => {
 	console.log(server.address());
 });
 
-server.listen(5000, "localhost");
+//server.listen(5000, "localhost");
+server.listen(49152, "149.89.150.100");
 
