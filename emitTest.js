@@ -1,11 +1,10 @@
 "use strict";
 
-//you want to only extend from this
 const EventEmitter = require("events");
 
+//you want to only extend from EventEmitter
 class MyEmitter extends EventEmitter {}
 
-//new EventEmitter instance
 let hi = new MyEmitter();
 
 //add a listener for the event

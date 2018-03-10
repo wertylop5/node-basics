@@ -21,7 +21,8 @@ server.on("request", (request, response) => {
 });
 
 server.on("listening", () => {
-	console.log(server.address());
+	let addr = server.address();
+	console.log(`server listening on ${addr.address}:${addr.port}`);
 });
 
 //server.listen(5000, "localhost");
