@@ -3,6 +3,8 @@
 const net = require("net");
 
 let server = net.createServer();
+
+//Will run once after listen() is called
 server.on("listening", () => {
 	let addr = server.address();
 	console.log(`server listening on ${addr.address}:${addr.port}`);

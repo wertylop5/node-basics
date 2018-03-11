@@ -17,6 +17,7 @@ hi.on("weee", num => {
 	console.log(`The number is: ${num}`);
 });
 
+//on() will push the listener to the end of the listeners array
 hi.on({yo: "5"}, () => {
 	console.log("uhhh");
 });
