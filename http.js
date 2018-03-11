@@ -46,6 +46,6 @@ server.on("listening", () => {
 	console.log(`server listening on ${addr.address}:${addr.port}`);
 });
 
-server.listen(5000, "localhost");
-//server.listen(49152, "149.89.150.100");
+//server.listen(5000, "localhost");
+server.listen(49152, "149.89.150.100");
 
