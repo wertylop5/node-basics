@@ -9,265 +9,310 @@
 	<title>Hello</title>
 </head>
 
-<body>
-	<h1 class="display-1 text-center">Node.js: Javascript on Your Server</h1>
-	<h3 class="display-3 text-center">By Stanley Lin</h3>
-	
-	<br>
-	<h1>Brief History</h1>
-	<ul>
-		<li>Originally created by Ryan Dahl in 2009</li>
-		<li>Dahl was critical of the most popular web server at the time, Apache HTTP Server</li>
-		<ul>
-			<li>Couldn’t handle more than 10,000 connections</li>
-			<li>Code usually was synchronous, blocked (paused) processes</li>
-		</ul>
-		<li>Inspired to create Node.js after seeing a progress bar on Flickr</li>
-		<ul>
-			<li>Didn’t know file upload progress, so had to constantly query the server</li>
-		</ul>
-	</ul>
-	
-	<br>
-	<h1>Uses</h1>
-	<ul>
-		<li>Javascript is client side: only runs in the webpage</li>
-		<li>Write server side code in Javascript!</li>
-		<li>Tons of modules built in</li>
-		<li>Practically everything is nonblocking</li>
-	</ul>
-	
-	<br>
-	<h1>Some Important Modules</h1>
-	<ul>
-		<li><code>events</code></li>
-		<li><code>stream</code></li>
-		<li><code>net</code></li>
-		<li><code>http</code></li>
-	</ul>
-	
-	<br>
-	<h1>Javascript Classes Do Exist!</h1>
-	<ul>
-		<li>Works pretty much like any other Object-Oriented language</li>
-	</ul>
-	<pre><code>class Foo {
-//stuff
-}
-</code></pre>
-	
-	<br>
-	<h1>Current Events</h1>
-	<ul>
-		<li>Node is “event-driven”</li>
-		<li>Objects emit these whenever anything of interest happens</li>
-		<li>If listeners attached, will trigger them</li>
-	</ul>
-	<h4>The <code>EventEmitter</code> class</h4>
-	<ul>
-		<li>Has an internal array of listeners for each event</li>
-		<li>Extend from this class</li>
-		<li>Synchronous</li>
-	</ul>
-	
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>on( eventName, listener )</code></dt>
-		<dd class="col-sm-9">Appends listener to the end of the listeners array for <code>eventName</code></dd>
+<body data-spy="scroll" data-target="#navbar">
+	<div class="container-fluid"> <!-- Body div -->
+	<div class="row flex-nowrap">
+		<div class="col-sm-2 bd-sidebar">
+			<nav class="nav flex-column nav-pills" id="navbar" style="position: sticky;">
+			<!-- <nav class="navbar flex-column nav-pills" id="navbar" style="position: sticky;"> -->
+				<a class="nav-link" href="#title">Node.js: Javascript on Your Server</a>
+				<a class="nav-link" href="#history">History</a>
+				<a class="nav-link" href="#uses">Uses</a>
+				<a class="nav-link" href="#modules">Modules</a>
+				<a class="nav-link" href="#js-class">A Note on Javascript Classes</a>
+				<a class="nav-link" href="#events">Current Events</a>
+				<a class="nav-link" href="#stream">Live Streaming</a>
+				<a class="nav-link" href="#net">Nothing but Net</a>
+				<a class="nav-link" href="#http">HTTP: All Together Now</a>
+				<a class="nav-link" href="#mean">MEAN Machine</a>
+				<a class="nav-link" href="#npm">There’s a Library for that</a>
+			</nav>
+		</div>
 		
-		<dt class="col-sm-3"><code>emit( eventName[, args…] )</code></dt>
-		<dd class="col-sm-9">Triggers any event listeners tied to <code>eventName</code>, providing it with <code>args</code></dd>
-	</dl>
+		<div class="col-sm-8"> <!-- Main content div -->
+			<h1 class="display-1 text-center" id="title">Node.js: Javascript on Your Server</h1>
+			<h3 class="display-3 text-center">By Stanley Lin</h3>
+			
+			<br>
+			<div class="container" id="history">
+				<h1>Brief History</h1>
+				<ul>
+					<li>Originally created by Ryan Dahl in 2009</li>
+					<li>Dahl was critical of the most popular web server at the time, Apache HTTP Server</li>
+					<ul>
+						<li>Couldn’t handle more than 10,000 connections</li>
+						<li>Code usually was synchronous, blocked (paused) processes</li>
+					</ul>
+					<li>Inspired to create Node.js after seeing a progress bar on Flickr</li>
+					<ul>
+						<li>Didn’t know file upload progress, so had to constantly query the server</li>
+					</ul>
+				</ul>
+			</div>
+			
+			<br>
+			<div class="container" id="uses">
+				<h1>Uses</h1>
+				<ul>
+					<li>Javascript is client side: only runs in the webpage</li>
+					<li>Write server side code in Javascript!</li>
+					<li>Tons of modules built in</li>
+					<li>Practically everything is nonblocking</li>
+				</ul>
+			</div>
+			
+			<br>
+			<div class="container" id="modules">
+				<h1>Some Important Modules</h1>
+				<ul>
+					<li><code>events</code></li>
+					<li><code>stream</code></li>
+					<li><code>net</code></li>
+					<li><code>http</code></li>
+				</ul>
+			</div>
+			
+			<br>
+			<div class="container" id="js-class">
+				<h1>Javascript Classes Do Exist!</h1>
+				<ul>
+					<li>Works pretty much like any other Object-Oriented language</li>
+				</ul>
+				<pre><code>class Foo {
+		//stuff
+		}
+				</code></pre>
+			</div>
+			
+			<br>
+			<div class="container" id="events">
+				<h1>Current Events</h1>
+				<ul>
+					<li>Node is “event-driven”</li>
+					<li>Objects emit these whenever anything of interest happens</li>
+					<li>If listeners attached, will trigger them</li>
+				</ul>
+				<h4>The <code>EventEmitter</code> class</h4>
+				<ul>
+					<li>Has an internal array of listeners for each event</li>
+					<li>Extend from this class</li>
+					<li>Synchronous</li>
+				</ul>
+			
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>on( eventName, listener )</code></dt>
+						<dd class="col-sm-9">Appends listener to the end of the listeners array for <code>eventName</code></dd>
+						
+						<dt class="col-sm-3"><code>emit( eventName[, args…] )</code></dt>
+						<dd class="col-sm-9">Triggers any event listeners tied to <code>eventName</code>, providing it with <code>args</code></dd>
+					</dl>
+				</div>
+			</div>
+			
+			<br>
+			<div class="container" id="stream">
+				<h1>Live Streaming</h1>
+				<ul>
+					<li>An "interface for working with streaming data in Node.js.”
+					<li>Readable, Writable, Duplex, Transform
+				</ul>
+				
+				<h4>The <code>stream.Readable</code> class</h4>
+				<h5>Events</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>"data" (chunk)</code></dt>
+						<dd class="col-sm-9">Emitted whenever a <code>chunk</code> of data is available to use</dd>
+						
+						<dt class="col-sm-3"><code>"end" ()</code></dt>
+						<dd class="col-sm-9">Emitted when a stream has no more data</dd>
+					</dl>
+				</div>
+				
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>pipe(destination)</code></dt>
+						<dd class="col-sm-9">Redirects data to the <code>destination</code> stream (a <code>Writable</code> stream)</dd>
+					</dl>
+				</div>
+				
+				<h4>The <code>stream.Writable</code> class</h4>
+				<h5>Events</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>"finish" ()</code></dt>
+						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+					</dl>
+				</div>
+				
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>write(chunk)</code></dt>
+						<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
+						
+						<dt class="col-sm-3"><code>end(chunk)</code></dt>
+						<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
+					</dl>
+				</div>
+			</div>
+			
+			
+			<br>
+			<div class="container" id="net">
+				<h1>Nothing but Net</h1>
+				<ul>
+					<li>An asynchronous API for creating stream-based TCP or IPC servers</li>
+					<li>Low level</li>
+					<li>Servers and sockets</li>
+					<li>Sockets are the endpoints if a connection</li>
+				</ul>
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>net.createServer()</code></dt>
+						<dd class="col-sm-9">Returns a new instance of <code>net.Server</code></dd>
+					</dl>
+				</div>
+				
+				<h4>The <code>net.Server</code> class</h4>
+				<h5>Events</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>"listening" ()</code></dt>
+						<dd class="col-sm-9">Emitted after <code>listen()</code> has been called</dd>
+						
+						<dt class="col-sm-3"><code>"close" ()</code></dt>
+						<dd class="col-sm-9">Emitted when the server stops accepting connections</dd>
+					</dl>
+				</div>
+				
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>address()</code></dt>
+						<dd class="col-sm-9">Returns an object with the following format: <code>{port: &lt;number&gt;, family: &lt;string&gt;, address: &lt;string&gt;}</code></dd>
+						
+						<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
+						<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
+						
+						<dt class="col-sm-3"><code>close()</code></dt>
+						<dd class="col-sm-9">Stops accepting connections and closes when all connections end. Emits the <code>"close"</code> event</dd>
+					</dl>
+				</div>
+			</div>
+			
+			
+			<br>
+			<div class="container" id="http">
+				<h1>HTTP: All Together Now</h1>
+				<ul>
+					<li>Higher level than net, handles HTTP protocol</li>
+					<li>Requests, responses</li>
+				</ul>
+				
+				<h4>The <code>http.IncomingMessage</code> class</h4>
+				<ul>
+					<li>Implements stream.Readable</li>
+				</ul>
+				<h5>Properties</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>message.headers</code></dt>
+						<dd class="col-sm-9">An object containing the HTTP headers</dd>
+						
+						<dt class="col-sm-3"><code>message.method</code></dt>
+						<dd class="col-sm-9">The HTTP method used as a string</dd>
+					</dl>
+				</div>
+				
+				<h4>The <code>http.ServerResponse</code> class</h4>
+				<ul>
+					<li>Implements stream.Writable, but doesn’t inherit from it</li>
+				</ul>
+				<h5>Events</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>"close" ()</code></dt>
+						<dd class="col-sm-9">Emitted when a connection was closed before <code>end()</code> was called</dd>
+						
+						<dt class="col-sm-3"><code>"finish" ()</code></dt>
+						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+					</dl>
+				</div>
+				
+				<h5>Methods</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>write(chunk)</code></dt>
+						<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
+						
+						<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
+						<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
+						
+						<dt class="col-sm-3"><code>end(chunk)</code></dt>
+						<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
+					</dl>
+				</div>
+				
+				<h4>The <code>http.Server</code> class</h4>
+				<ul>
+					<li>Extends from net.Server</li>
+				</ul>
+				<h5>Events</h5>
+				<div class="container">
+					<dl class="row">
+						<dt class="col-sm-3"><code>“request” (request, response)</code></dt>
+						<dd class="col-sm-9"><code>request</code> is a <code>IncomingMessage</code>, <code>response</code> is a <code>ServerResponse</code></dd>
+					
+						<dt class="col-sm-3"><code>"finish" ()</code></dt>
+						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+					</dl>
+				</div>
+			</div>
+			
+			
+			<br>
+			<div class="container" id="mean">
+				<h1>MEAN Machine</h1>
+				<ul>
+					<li>A commonly used software stack for web app development</li>
+					<li>Mongo (the database), Express (web framework), Angular (for frontend), Node (for backend)</li>
+				</ul>
+				<figure class="figure">
+					<img src="res/MEAN.png" class="figure-img rounded" alt="MEAN stack visual" width="512" height="381">
+					<figcaption class="figure-caption">The MEAN stack</figcaption>
+				</figure>
+			</div>
+			
+			
+			<br>
+			<div class="container" id="npm">
+				<h1>There’s a Library for that</h1>
+				<ul>
+					<li>NPM!</li>
+					<ul>
+						<li>A Javascript package manager (works like pip from python)</li>
+						<li>Angular, Express, and the Mongo Javascript Driver are all on npm</li>
+					</ul>
+					<li>Fun fact: NPM is not officially an acronym for anything</li>
+					<ul>
+						<li>Node Package Manager?</li>
+						<li>Nearly Pure Mustard?</li>
+						<li>Nutella Peanut-butter Marshmallow?</li>
+					</ul>
+				</ul>
+			</div>
+			
+		</div> <!-- End main content div -->
 	</div>
-	
-	<br>
-	<h1>Live Streaming</h1>
-	<ul>
-		<li>An "interface for working with streaming data in Node.js.”
-		<li>Readable, Writable, Duplex, Transform
-	</ul>
-	
-	<h4>The <code>stream.Readable</code> class</h4>
-	<h5>Events</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>"data" (chunk)</code></dt>
-		<dd class="col-sm-9">Emitted whenever a <code>chunk</code> of data is available to use</dd>
-		
-		<dt class="col-sm-3"><code>"end" ()</code></dt>
-		<dd class="col-sm-9">Emitted when a stream has no more data</dd>
-	</dl>
-	</div>
-	
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>pipe(destination)</code></dt>
-		<dd class="col-sm-9">Redirects data to the <code>destination</code> stream (a <code>Writable</code> stream)</dd>
-	</dl>
-	</div>
-	
-	<h4>The <code>stream.Writable</code> class</h4>
-	<h5>Events</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>"finish" ()</code></dt>
-		<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
-	</dl>
-	</div>
-	
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>write(chunk)</code></dt>
-		<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
-		
-		<dt class="col-sm-3"><code>end(chunk)</code></dt>
-		<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
-	</dl>
-	</div>
-	
-	
-	<br>
-	<h1>Nothing but Net</h1>
-	<ul>
-		<li>An asynchronous API for creating stream-based TCP or IPC servers</li>
-		<li>Low level</li>
-		<li>Servers and sockets</li>
-		<li>Sockets are the endpoints if a connection</li>
-	</ul>
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>net.createServer()</code></dt>
-		<dd class="col-sm-9">Returns a new instance of <code>net.Server</code></dd>
-	</dl>
-	</div>
-	
-	<h4>The <code>net.Server</code> class</h4>
-	<h5>Events</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>"listening" ()</code></dt>
-		<dd class="col-sm-9">Emitted after <code>listen()</code> has been called</dd>
-		
-		<dt class="col-sm-3"><code>"close" ()</code></dt>
-		<dd class="col-sm-9">Emitted when the server stops accepting connections</dd>
-	</dl>
-	</div>
-	
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>address()</code></dt>
-		<dd class="col-sm-9">Returns an object with the following format: <code>{port: &lt;number&gt;, family: &lt;string&gt;, address: &lt;string&gt;}</code></dd>
-		
-		<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
-		<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
-		
-		<dt class="col-sm-3"><code>close()</code></dt>
-		<dd class="col-sm-9">Stops accepting connections and closes when all connections end. Emits the <code>"close"</code> event</dd>
-	</dl>
-	</div>
-	
-	
-	<br>
-	<h1>HTTP: All Together Now</h1>
-	<ul>
-		<li>Higher level than net, handles HTTP protocol</li>
-		<li>Requests, responses</li>
-	</ul>
-	
-	<h4>The <code>http.IncomingMessage</code> class</h4>
-	<ul>
-		<li>Implements stream.Readable</li>
-	</ul>
-	<h5>Properties</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>message.headers</code></dt>
-		<dd class="col-sm-9">An object containing the HTTP headers</dd>
-		
-		<dt class="col-sm-3"><code>message.method</code></dt>
-		<dd class="col-sm-9">The HTTP method used as a string</dd>
-	</dl>
-	</div>
-	
-	<h4>The <code>http.ServerResponse</code> class</h4>
-	<ul>
-		<li>Implements stream.Writable, but doesn’t inherit from it</li>
-	</ul>
-	<h5>Events</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>"close" ()</code></dt>
-		<dd class="col-sm-9">Emitted when a connection was closed before <code>end()</code> was called</dd>
-		
-		<dt class="col-sm-3"><code>"finish" ()</code></dt>
-		<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
-	</dl>
-	</div>
-	
-	<h5>Methods</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>write(chunk)</code></dt>
-		<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
-		
-		<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
-		<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
-		
-		<dt class="col-sm-3"><code>end(chunk)</code></dt>
-		<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
-	</dl>
-	</div>
-	
-	<h4>The <code>http.Server</code> class</h4>
-	<ul>
-		<li>Extends from net.Server</li>
-	</ul>
-	<h5>Events</h5>
-	<div class="container">
-	<dl class="row">
-		<dt class="col-sm-3"><code>“request” (request, response)</code></dt>
-		<dd class="col-sm-9"><code>request</code> is a <code>IncomingMessage</code>, <code>response</code> is a <code>ServerResponse</code></dd>
-	
-		<dt class="col-sm-3"><code>"finish" ()</code></dt>
-		<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
-	</dl>
-	</div>
-	
-	
-	<br>
-	<h1>MEAN Machine</h1>
-	<ul>
-		<li>A commonly used software stack for web app development</li>
-		<li>Mongo (the database), Express (web framework), Angular (for frontend), Node (for backend)</li>
-	</ul>
-	<figure class="figure">
-		<img src="res/MEAN.png" class="figure-img rounded" alt="MEAN stack visual" width="512" height="381">
-		<figcaption class="figure-caption">The MEAN stack</figcaption>
-	</figure>
-	
-	
-	<br>
-	<h1>There’s a Library for that</h1>
-	<ul>
-		<li>NPM!</li>
-		<ul>
-			<li>A Javascript package manager (works like pip from python)</li>
-			<li>Angular, Express, and the Mongo Javascript Driver are all on npm</li>
-		</ul>
-		<li>Fun fact: NPM is not officially an acronym for anything</li>
-		<ul>
-			<li>Node Package Manager?</li>
-			<li>Nearly Pure Mustard?</li>
-			<li>Nutella Peanut-butter Marshmallow?</li>
-		</ul>
-	</ul>
+	</div> <!-- End body div -->
 	
 	<script src="lib/jquery/jquery-3.3.1.min.js"></script>
 	<script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
