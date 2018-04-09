@@ -13,7 +13,7 @@
 <body data-spy="scroll" data-target="#navbar">
 	<div class="container-fluid"> <!-- Body div -->
 	<div class="row">
-		<div class="col-12 col-md-4">
+		<div class="col-12 col-lg-4">
 			<nav class="nav flex-column nav-pills" id="navbar">
 				<a class="nav-link" href="#title">Node.js: Javascript on Your Server</a>
 				<a class="nav-link" href="#history">History</a>
@@ -29,7 +29,7 @@
 			</nav>
 		</div>
 		
-		<div class="col-12 col-md-8"> <!-- Main content div -->
+		<div class="col-12 col-lg-8"> <!-- Main content div -->
 			<h1 class="display-1 text-center" id="title">Node.js: Javascript on Your Server</h1>
 			<h3 class="display-3 text-center">By Stanley Lin</h3>
 			
@@ -102,11 +102,11 @@
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>on( eventName, listener )</code></dt>
-						<dd class="col-sm-9">Appends listener to the end of the listeners array for <code>eventName</code></dd>
+						<dt class="col-sm-4"><code>on( eventName, listener )</code></dt>
+						<dd class="col-sm-8">Appends listener to the end of the listeners array for <code>eventName</code></dd>
 						
-						<dt class="col-sm-3"><code>emit( eventName[, args…] )</code></dt>
-						<dd class="col-sm-9">Triggers any event listeners tied to <code>eventName</code>, providing it with <code>args</code></dd>
+						<dt class="col-sm-4"><code>emit( eventName[, args…] )</code></dt>
+						<dd class="col-sm-8">Triggers any event listeners tied to <code>eventName</code>, providing it with <code>args</code></dd>
 					</dl>
 				</div>
 			</div>
@@ -123,19 +123,19 @@
 				<h5>Events</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>"data" (chunk)</code></dt>
-						<dd class="col-sm-9">Emitted whenever a <code>chunk</code> of data is available to use</dd>
+						<dt class="col-sm-4"><code>"data" (chunk)</code></dt>
+						<dd class="col-sm-8">Emitted whenever a <code>chunk</code> of data is available to use</dd>
 						
-						<dt class="col-sm-3"><code>"end" ()</code></dt>
-						<dd class="col-sm-9">Emitted when a stream has no more data</dd>
+						<dt class="col-sm-4"><code>"end" ()</code></dt>
+						<dd class="col-sm-8">Emitted when a stream has no more data</dd>
 					</dl>
 				</div>
 				
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>pipe(destination)</code></dt>
-						<dd class="col-sm-9">Redirects data to the <code>destination</code> stream (a <code>Writable</code> stream)</dd>
+						<dt class="col-sm-4"><code>pipe(destination)</code></dt>
+						<dd class="col-sm-8">Redirects data to the <code>destination</code> stream (a <code>Writable</code> stream)</dd>
 					</dl>
 				</div>
 				
@@ -143,19 +143,19 @@
 				<h5>Events</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>"finish" ()</code></dt>
-						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+						<dt class="col-sm-4"><code>"finish" ()</code></dt>
+						<dd class="col-sm-8">Emitted after <code>end()</code> has been called</dd>
 					</dl>
 				</div>
 				
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>write(chunk)</code></dt>
-						<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
+						<dt class="col-sm-4"><code>write(chunk)</code></dt>
+						<dd class="col-sm-8">Adds a <code>chunk</code> of data to the stream</dd>
 						
-						<dt class="col-sm-3"><code>end(chunk)</code></dt>
-						<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
+						<dt class="col-sm-4"><code>end(chunk)</code></dt>
+						<dd class="col-sm-8">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
 					</dl>
 				</div>
 			</div>
@@ -173,8 +173,8 @@
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>net.createServer()</code></dt>
-						<dd class="col-sm-9">Returns a new instance of <code>net.Server</code></dd>
+						<dt class="col-sm-4"><code>net.createServer()</code></dt>
+						<dd class="col-sm-8">Returns a new instance of <code>net.Server</code></dd>
 					</dl>
 				</div>
 				
@@ -182,25 +182,25 @@
 				<h5>Events</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>"listening" ()</code></dt>
-						<dd class="col-sm-9">Emitted after <code>listen()</code> has been called</dd>
+						<dt class="col-sm-4"><code>"listening" ()</code></dt>
+						<dd class="col-sm-8">Emitted after <code>listen()</code> has been called</dd>
 						
-						<dt class="col-sm-3"><code>"close" ()</code></dt>
-						<dd class="col-sm-9">Emitted when the server stops accepting connections</dd>
+						<dt class="col-sm-4"><code>"close" ()</code></dt>
+						<dd class="col-sm-8">Emitted when the server stops accepting connections</dd>
 					</dl>
 				</div>
 				
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>address()</code></dt>
-						<dd class="col-sm-9">Returns an object with the following format: <code>{port: &lt;number&gt;, family: &lt;string&gt;, address: &lt;string&gt;}</code></dd>
+						<dt class="col-sm-4"><code>address()</code></dt>
+						<dd class="col-sm-8">Returns an object with the following format: <code>{port: &lt;number&gt;, family: &lt;string&gt;, address: &lt;string&gt;}</code></dd>
 						
-						<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
-						<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
+						<dt class="col-sm-4"><code>listen([port][, host])</code></dt>
+						<dd class="col-sm-8">Starts a server and begins listening for connections</dd>
 						
-						<dt class="col-sm-3"><code>close()</code></dt>
-						<dd class="col-sm-9">Stops accepting connections and closes when all connections end. Emits the <code>"close"</code> event</dd>
+						<dt class="col-sm-4"><code>close()</code></dt>
+						<dd class="col-sm-8">Stops accepting connections and closes when all connections end. Emits the <code>"close"</code> event</dd>
 					</dl>
 				</div>
 			</div>
@@ -221,11 +221,11 @@
 				<h5>Properties</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>message.headers</code></dt>
-						<dd class="col-sm-9">An object containing the HTTP headers</dd>
+						<dt class="col-sm-4"><code>message.headers</code></dt>
+						<dd class="col-sm-8">An object containing the HTTP headers</dd>
 						
-						<dt class="col-sm-3"><code>message.method</code></dt>
-						<dd class="col-sm-9">The HTTP method used as a string</dd>
+						<dt class="col-sm-4"><code>message.method</code></dt>
+						<dd class="col-sm-8">The HTTP method used as a string</dd>
 					</dl>
 				</div>
 				
@@ -236,25 +236,25 @@
 				<h5>Events</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>"close" ()</code></dt>
-						<dd class="col-sm-9">Emitted when a connection was closed before <code>end()</code> was called</dd>
+						<dt class="col-sm-4"><code>"close" ()</code></dt>
+						<dd class="col-sm-8">Emitted when a connection was closed before <code>end()</code> was called</dd>
 						
-						<dt class="col-sm-3"><code>"finish" ()</code></dt>
-						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+						<dt class="col-sm-4"><code>"finish" ()</code></dt>
+						<dd class="col-sm-8">Emitted after <code>end()</code> has been called</dd>
 					</dl>
 				</div>
 				
 				<h5>Methods</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>write(chunk)</code></dt>
-						<dd class="col-sm-9">Adds a <code>chunk</code> of data to the stream</dd>
+						<dt class="col-sm-4"><code>write(chunk)</code></dt>
+						<dd class="col-sm-8">Adds a <code>chunk</code> of data to the stream</dd>
 						
-						<dt class="col-sm-3"><code>listen([port][, host])</code></dt>
-						<dd class="col-sm-9">Starts a server and begins listening for connections</dd>
+						<dt class="col-sm-4"><code>listen([port][, host])</code></dt>
+						<dd class="col-sm-8">Starts a server and begins listening for connections</dd>
 						
-						<dt class="col-sm-3"><code>end(chunk)</code></dt>
-						<dd class="col-sm-9">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
+						<dt class="col-sm-4"><code>end(chunk)</code></dt>
+						<dd class="col-sm-8">Writes <code>chunk</code>, then closes the stream to writing. Will emit the <code>"finish"</code> event</dd>
 					</dl>
 				</div>
 				
@@ -265,11 +265,11 @@
 				<h5>Events</h5>
 				<div class="container">
 					<dl class="row">
-						<dt class="col-sm-3"><code>“request” (request, response)</code></dt>
-						<dd class="col-sm-9"><code>request</code> is a <code>IncomingMessage</code>, <code>response</code> is a <code>ServerResponse</code></dd>
+						<dt class="col-sm-4"><code>“request” (request, response)</code></dt>
+						<dd class="col-sm-8"><code>request</code> is a <code>IncomingMessage</code>, <code>response</code> is a <code>ServerResponse</code></dd>
 					
-						<dt class="col-sm-3"><code>"finish" ()</code></dt>
-						<dd class="col-sm-9">Emitted after <code>end()</code> has been called</dd>
+						<dt class="col-sm-4"><code>"finish" ()</code></dt>
+						<dd class="col-sm-8">Emitted after <code>end()</code> has been called</dd>
 					</dl>
 				</div>
 			</div>

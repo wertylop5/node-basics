@@ -9,15 +9,6 @@
 }
 */
 
-/*From Bootstrap docs, tablet size or larger*/
-@media (min-width: 768px) {
-	/*
-	#navbar {
-		position: fixed;
-	}
-	*/
-}
-
 /*From Bootstrap docs, desktop size or larger*/
 @media (min-width: 992px) {
 	#navbar {
