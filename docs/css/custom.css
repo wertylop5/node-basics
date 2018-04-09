@@ -1,19 +1,29 @@
 #meanDiagram {
-	width: 128px;
-	height: 95px;
-
 	width: 256px;
 	height: 191px;
 }
+/*
+#navbar {
+	height: 150px;
+	overflow-y: scroll;
+}
+*/
 
 /*From Bootstrap docs, tablet size or larger*/
 @media (min-width: 768px) {
+	/*
 	#navbar {
 		position: fixed;
 	}
+	*/
 }
 
-@media (min-width: 576px) {
+/*From Bootstrap docs, desktop size or larger*/
+@media (min-width: 992px) {
+	#navbar {
+		position: fixed;
+	}
+	
 	#meanDiagram {
 		width: 512px;
 		height: 381px;
