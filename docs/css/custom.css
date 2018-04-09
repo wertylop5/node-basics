@@ -1,0 +1,22 @@
+#meanDiagram {
+	width: 128px;
+	height: 95px;
+
+	width: 256px;
+	height: 191px;
+}
+
+/*From Bootstrap docs, tablet size or larger*/
+@media (min-width: 768px) {
+	#navbar {
+		position: fixed;
+	}
+}
+
+@media (min-width: 576px) {
+	#meanDiagram {
+		width: 512px;
+		height: 381px;
+	}
+}
+
